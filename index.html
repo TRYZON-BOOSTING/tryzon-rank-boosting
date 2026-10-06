@@ -101,6 +101,22 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
  .cards{grid-template-columns:1fr}.brand span{font-size:13px}
  h1{font-size:48px}.hero p{font-size:15px}
 }
+
+/* V3 upgrades */
+.glow-line{height:2px;width:100%;background:linear-gradient(90deg,transparent,#27d9ff,transparent);opacity:.75;margin-top:6px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:25px 0}
+.stat{padding:16px;border:1px solid #1b3e54;border-radius:15px;background:rgba(8,18,31,.75);text-align:center}
+.stat strong{display:block;font-size:22px;color:#62ddff}.stat span{font-size:11px;color:#8297ad;text-transform:uppercase;letter-spacing:1px}
+.rank-badges{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}
+.rank-badges span{padding:7px 10px;border-radius:9px;background:#0b1827;border:1px solid #21465c;color:#a9dff0;font-size:11px;font-weight:800}
+.card .tag{position:absolute;right:14px;top:14px;padding:5px 8px;border-radius:7px;background:#12364a;color:#6fe2ff;font-size:9px;font-weight:900;letter-spacing:.7px}
+.gallery{display:grid;grid-template-columns:1.5fr .75fr;gap:16px}
+.gallery img{width:100%;height:100%;object-fit:cover;border-radius:18px;border:1px solid #21485d;box-shadow:0 0 30px rgba(0,190,255,.1)}
+.gallery-main{min-height:360px}.gallery-side{display:grid;gap:16px}
+.gallery-side .mini{padding:22px;border-radius:18px;background:#0a121f;border:1px solid #1b3a4e;display:flex;flex-direction:column;justify-content:center}
+.mini b{font-size:24px;color:#63ddff}.mini p{font-size:13px;color:#8fa4b8;margin-top:5px}
+.notice{margin-top:18px;padding:14px 16px;border-left:3px solid #21c9ff;background:#081523;color:#9db2c6;font-size:13px;border-radius:8px}
+@media(max-width:700px){.stats{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.gallery-main{min-height:230px}}
 </style>
 </head>
 <body>
@@ -108,7 +124,7 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
   <div class="container navin">
     <a class="brand" href="#home"><img src="logo.png" alt="TRYZON logo"><span>TRYZON RANK BOOSTING</span></a>
     <div class="links">
-      <a href="#prices">Prices</a><a href="#how">How It Works</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      <a href="#prices">Prices</a><a href="#how">How It Works</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
@@ -120,7 +136,13 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
       <div class="badge">BLOOD STRIKE • RANK BOOSTING</div>
       <h1>TRYZON<br><span>RANK BOOSTING</span></h1>
       <p>Fast, simple and affordable Blood Strike rank boosting service. Choose your target rank and place your order through WhatsApp.</p>
-      <div class="buttons">
+      <div class="stats">
+  <div class="stat"><strong>4+</strong><span>Packages</span></div>
+  <div class="stat"><strong>SF + BR</strong><span>Ranks</span></div>
+  <div class="stat"><strong>WhatsApp</strong><span>Easy Order</span></div>
+</div>
+<div class="rank-badges"><span>BRONZE</span><span>LEGEND</span><span>MYTHIC</span><span>TOP 50</span></div>
+<div class="buttons">
         <a class="btn primary" href="https://wa.me/94742652594?text=Hi%20TRYZON%2C%20I%20want%20to%20order%20rank%20boosting." target="_blank">ORDER ON WHATSAPP</a>
         <a class="btn secondary" href="#prices">VIEW PRICES</a>
       </div>
@@ -136,25 +158,25 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
       <p>Choose your target and order directly.</p>
     </div>
     <div class="cards">
-      <article class="card">
+      <article class="card"><span class="tag">POPULAR</span>
         <div class="rank-icon">S</div><h3>SF RANK</h3>
         <div class="price">LKR 500</div>
         <ul><li>• Bronze → Legend</li><li>• SF Rank</li></ul>
         <a class="btn order" href="https://wa.me/94742652594?text=Hi%20TRYZON%2C%20I%20want%20SF%20Rank%20Bronze%20to%20Legend%20-%20LKR%20500." target="_blank">ORDER NOW</a>
       </article>
-      <article class="card">
+      <article class="card"><span class="tag">TOP 250</span>
         <div class="rank-icon">250</div><h3>SF RANK TOP 250 / 150</h3>
         <div class="price">LKR 900</div>
         <ul><li>• Server TOP 250 / 150</li><li>• SF Rank</li></ul>
         <a class="btn order" href="https://wa.me/94742652594?text=Hi%20TRYZON%2C%20I%20want%20SF%20Rank%20TOP%20250%20%2F%20150%20-%20LKR%20900." target="_blank">ORDER NOW</a>
       </article>
-      <article class="card">
+      <article class="card"><span class="tag">HIGH TIER</span>
         <div class="rank-icon">50</div><h3>SF RANK TOP 150 / 50</h3>
         <div class="price">LKR 1000</div>
         <ul><li>• Server TOP 150 / 50</li><li>• SF Rank</li></ul>
         <a class="btn order" href="https://wa.me/94742652594?text=Hi%20TRYZON%2C%20I%20want%20SF%20Rank%20TOP%20150%20%2F%2050%20-%20LKR%201000." target="_blank">ORDER NOW</a>
       </article>
-      <article class="card">
+      <article class="card"><span class="tag">BR</span>
         <div class="rank-icon">B</div><h3>BR RANK</h3>
         <div class="price">LKR 300</div>
         <ul><li>• Bronze → Mythic</li><li>• BR Rank</li></ul>
@@ -172,6 +194,21 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
       <div class="step"><div class="num">2</div><h3>Message Us</h3><p>Tap ORDER NOW and contact us on WhatsApp.</p></div>
       <div class="step"><div class="num">3</div><h3>Get Started</h3><p>Confirm the order details and service terms with us.</p></div>
     </div>
+  </div>
+</section>
+
+
+<section id="gallery">
+  <div class="container">
+    <div class="section-title"><h2>TRYZON GALLERY</h2><p>Gaming style. Simple ordering. Clear packages.</p></div>
+    <div class="gallery">
+      <img class="gallery-main" src="hero.png" alt="TRYZON Blood Strike service">
+      <div class="gallery-side">
+        <div class="mini"><b>⚡ FAST ORDER</b><p>Choose your package and message us directly on WhatsApp.</p></div>
+        <div class="mini"><b>🎯 TARGET RANK</b><p>Pick the rank package that matches your goal.</p></div>
+      </div>
+    </div>
+    <div class="notice">Before placing an order, confirm the current package, availability and service details with TRYZON on WhatsApp.</div>
   </div>
 </section>
 

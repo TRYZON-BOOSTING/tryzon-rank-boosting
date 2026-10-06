@@ -116,6 +116,27 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
 .gallery-side .mini{padding:22px;border-radius:18px;background:#0a121f;border:1px solid #1b3a4e;display:flex;flex-direction:column;justify-content:center}
 .mini b{font-size:24px;color:#63ddff}.mini p{font-size:13px;color:#8fa4b8;margin-top:5px}
 .notice{margin-top:18px;padding:14px 16px;border-left:3px solid #21c9ff;background:#081523;color:#9db2c6;font-size:13px;border-radius:8px}
+
+.rank-showcase{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-top:28px}
+.rank-tile{min-height:105px;padding:14px 8px;border-radius:16px;background:linear-gradient(180deg,#0d1b2d,#07101c);border:1px solid #1d4359;text-align:center;position:relative;overflow:hidden;transition:.2s}
+.rank-tile:hover{transform:translateY(-4px);border-color:#35d8ff;box-shadow:0 10px 25px rgba(0,180,255,.12)}
+.rank-gem{width:44px;height:44px;margin:0 auto 8px;display:grid;place-items:center;clip-path:polygon(50% 0,88% 22%,100% 62%,72% 100%,28% 100%,0 62%,12% 22%);background:linear-gradient(145deg,#9cecff,#137aa2);color:#041019;font-weight:1000;font-size:12px}
+.rank-tile:nth-child(1) .rank-gem{background:linear-gradient(145deg,#b5bdc7,#5d6874)}
+.rank-tile:nth-child(2) .rank-gem{background:linear-gradient(145deg,#e6a67c,#8b421d)}
+.rank-tile:nth-child(3) .rank-gem{background:linear-gradient(145deg,#ffe58b,#a97816)}
+.rank-tile:nth-child(4) .rank-gem{background:linear-gradient(145deg,#d8eaff,#678fc0)}
+.rank-tile:nth-child(5) .rank-gem{background:linear-gradient(145deg,#cda8ff,#6637a8)}
+.rank-tile:nth-child(6) .rank-gem{background:linear-gradient(145deg,#ff9a55,#a9340c)}
+.rank-tile:nth-child(7) .rank-gem{background:linear-gradient(145deg,#73ecff,#1670b4)}
+.rank-tile:nth-child(8) .rank-gem{background:linear-gradient(145deg,#fff2a2,#e1a61d)}
+.rank-tile b{display:block;font-size:11px;letter-spacing:.6px}.rank-tile span{font-size:9px;color:#7892a8}
+.order-panel{display:grid;grid-template-columns:1fr .8fr;gap:24px;align-items:stretch}
+.order-box{padding:28px;border-radius:22px;background:linear-gradient(135deg,#0b1b2b,#07111d);border:1px solid #214b63}
+.order-box h3{font-size:25px;margin-bottom:7px}.order-box p{color:#8fa5b9;font-size:14px}
+.order-list{list-style:none;margin:18px 0}.order-list li{padding:9px 0;border-bottom:1px solid #163043;color:#b4c5d5;font-size:13px}.order-list li:last-child{border-bottom:0}
+.order-form{display:grid;gap:12px;margin-top:18px}.order-form label{font-size:11px;color:#7e95aa;text-transform:uppercase;letter-spacing:.8px;font-weight:800}.order-form select,.order-form input{width:100%;padding:13px 14px;border-radius:11px;border:1px solid #24465a;background:#07111d;color:#fff;outline:none}.order-form select:focus,.order-form input:focus{border-color:#31d4ff}.big-order{width:100%;margin-top:4px}
+@media(max-width:950px){.rank-showcase{grid-template-columns:repeat(4,1fr)}.order-panel{grid-template-columns:1fr}}
+
 @media(max-width:700px){.stats{grid-template-columns:1fr 1fr}.gallery{grid-template-columns:1fr}.gallery-main{min-height:230px}}
 </style>
 </head>
@@ -124,7 +145,7 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
   <div class="container navin">
     <a class="brand" href="#home"><img src="logo.png" alt="TRYZON logo"><span>TRYZON RANK BOOSTING</span></a>
     <div class="links">
-      <a href="#prices">Prices</a><a href="#how">How It Works</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+      <a href="#prices">Prices</a><a href="#ranks">Ranks</a><a href="#how">How It Works</a><a href="#order">Order</a><a href="#faq">FAQ</a>
     </div>
   </div>
 </nav>
@@ -186,6 +207,22 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
   </div>
 </section>
 
+<section id="ranks">
+  <div class="container">
+    <div class="section-title"><h2>RANK JOURNEY</h2><p>From Bronze to Mythic — choose your target rank.</p></div>
+    <div class="rank-showcase">
+      <div class="rank-tile"><div class="rank-gem">BR</div><b>BRONZE</b><span>START</span></div>
+      <div class="rank-tile"><div class="rank-gem">SI</div><b>SILVER</b><span>RANK UP</span></div>
+      <div class="rank-tile"><div class="rank-gem">GO</div><b>GOLD</b><span>RANK UP</span></div>
+      <div class="rank-tile"><div class="rank-gem">PL</div><b>PLATINUM</b><span>RANK UP</span></div>
+      <div class="rank-tile"><div class="rank-gem">DI</div><b>DIAMOND</b><span>HIGH TIER</span></div>
+      <div class="rank-tile"><div class="rank-gem">MA</div><b>MASTER</b><span>HIGH TIER</span></div>
+      <div class="rank-tile"><div class="rank-gem">LE</div><b>LEGEND</b><span>TOP TIER</span></div>
+      <div class="rank-tile"><div class="rank-gem">MY</div><b>MYTHIC</b><span>TOP TIER</span></div>
+    </div>
+  </div>
+</section>
+
 <section id="how">
   <div class="container">
     <div class="section-title"><h2>How It Works</h2><p>3 simple steps</p></div>
@@ -209,6 +246,30 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
       </div>
     </div>
     <div class="notice">Before placing an order, confirm the current package, availability and service details with TRYZON on WhatsApp.</div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="container">
+    <div class="section-title"><h2>ORDER NOW</h2><p>Select a package and send your order details on WhatsApp.</p></div>
+    <div class="order-panel">
+      <div class="order-box">
+        <h3>⚡ Quick WhatsApp Order</h3>
+        <p>No complicated checkout. Select your package, enter your name, then send the ready-made WhatsApp message.</p>
+        <ul class="order-list">
+          <li>✓ Fast response through WhatsApp</li>
+          <li>✓ Confirm price and availability before payment</li>
+          <li>✓ Custom target rank enquiries welcome</li>
+        </ul>
+      </div>
+      <div class="order-box">
+        <div class="order-form">
+          <div><label for="pkg">Package</label><select id="pkg"><option value="SF Rank — Bronze to Legend — LKR 500">SF Rank — Bronze to Legend — LKR 500</option><option value="SF Rank TOP 250 / 150 — LKR 900">SF Rank TOP 250 / 150 — LKR 900</option><option value="SF Rank TOP 150 / 50 — LKR 1000">SF Rank TOP 150 / 50 — LKR 1000</option><option value="BR Rank — Bronze to Mythic — LKR 300">BR Rank — Bronze to Mythic — LKR 300</option></select></div>
+          <div><label for="player">Player Name / Game ID</label><input id="player" type="text" placeholder="Enter your player name or game ID"></div>
+          <button class="btn primary big-order" type="button" onclick="sendOrder()">SEND ORDER ON WHATSAPP</button>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -236,5 +297,14 @@ footer{padding:30px 0;text-align:center;color:#6f8398;border-top:1px solid #1325
 </main>
 
 <footer>© 2026 TRYZON RANK BOOSTING • Blood Strike</footer>
+
+<script>
+function sendOrder(){
+ const pkg=document.getElementById('pkg').value;
+ const player=document.getElementById('player').value.trim();
+ const msg=`Hi TRYZON, I want to place an order.%0A%0APackage: ${encodeURIComponent(pkg)}%0APlayer Name / Game ID: ${encodeURIComponent(player || 'I will provide this in chat.')}`;
+ window.open('https://wa.me/94742652594?text='+msg,'_blank');
+}
+</script>
 </body>
 </html>
